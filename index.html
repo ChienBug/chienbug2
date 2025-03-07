@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="do_you_love_me.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="do_you_love_me.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  </head>
-  <body>
-    <div class="question-container container">
-      <img 
-        src="https://media.giphy.com/media/40a8kdO2zfYTEzBuMN/giphy.gif" 
-        alt="Cute GIF" 
-        style="width: 500px; height: auto;"/>
+    <title>Do You Love Me?</title>
+</head>
+<body>
 
-      <h1 class="question" style="font-size: 28px; text-align: center; width: 500px;">Bạn thấy Chiến có đẹp trai không?<i class="fa-solid fa-heart" style="color: red;"></i></h1>
-      <div class="button-container">
-        <button class="yes-btn btn js-yes-btn">Yes sir, chắc chắn rồi</button>
-        <button class="no-btn btn js-no-btn">Có cái đầu...</button>
-      </div>
+    <div class="question-container container">
+        <img src="https://media.giphy.com/media/40a8kdO2zfYTEzBuMN/giphy.gif" 
+             alt="Cute GIF" 
+             class="gif-image"/>
+
+        <h1 class="question">Bạn thấy Chiến có đẹp trai không? 
+            <i class="fa-solid fa-heart" style="color: red;"></i>
+        </h1>
+
+        <div class="button-container">
+            <button class="yes-btn btn js-yes-btn">Yes sir, chắc chắn rồi</button>
+            <button class="no-btn btn js-no-btn">Có cái đầu...</button>
+        </div>
     </div>
+
     <div class="result-container container">
-      <div class="video-wrapper">
-      <video class="gif-result" src="cute_love_gif.mp4" autoplay loop controls></video>
-      </div>
-      <h2>Bạn thật có mắt nhìn người😍</h2>
+        <div class="video-wrapper">
+            <video class="gif-result" src="cute_love_gif.mp4" autoplay loop controls></video>
+        </div>
+        <h2>Bạn thật có mắt nhìn người😍</h2>
     </div>
-    <script>
-  document.getElementById("yesButton").addEventListener("click", function () {
-    document.getElementById("resultContainer").style.display = "block";
-  });
-</script>
+
     <div class="cssload-main">
-      <div class="cssload-heart">
-        <span class="cssload-heartL"></span>
-        <span class="cssload-heartR"></span>
-        <span class="cssload-square"></span>
-      </div>
-      <div class="cssload-shadow"></div>
+        <div class="cssload-heart">
+            <span class="cssload-heartL"></span>
+            <span class="cssload-heartR"></span>
+            <span class="cssload-square"></span>
+        </div>
+        <div class="cssload-shadow"></div>
     </div>
-    <script src="/chienbug1/do_you_love_me.js"></script>
-  </body>
+
+    <script src="do_you_love_me.js"></script>
+</body>
 </html>

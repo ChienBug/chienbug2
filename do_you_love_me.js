@@ -7,13 +7,17 @@ const noBtn = document.querySelector(".js-no-btn");
 
 // Hàm di chuyển nút "No" đến vị trí ngẫu nhiên
 function moveNoButton() {
-  const newX = Math.floor(Math.random() * (questionContainer.offsetWidth - noBtn.offsetWidth));
-  const newY = Math.floor(Math.random() * (questionContainer.offsetHeight - noBtn.offsetHeight));
+  const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+  const maxY = window.innerHeight - noBtn.offsetHeight - 20;
 
-  noBtn.style.position = "absolute"; // Đảm bảo nút có thể di chuyển
+  const newX = Math.max(0, Math.random() * maxX);
+  const newY = Math.max(0, Math.random() * maxY);
+
+  noBtn.style.position = "absolute";
   noBtn.style.left = `${newX}px`;
   noBtn.style.top = `${newY}px`;
 }
+
 
 // Sự kiện di chuột trên máy tính
 noBtn.addEventListener("mouseover", moveNoButton);

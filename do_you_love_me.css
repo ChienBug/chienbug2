@@ -83,14 +83,14 @@ body {
   text-shadow: 1px 1px 5px rgba(255, 182, 193, 0.8);
 }
 
-.yes-btn, .no-btn {
-  position: absolute;
-  width: 150px;
-  height: 50px;
-  font-size: 16px;
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative; /* Đảm bảo không bị ảnh hưởng bởi absolute */
 }
 
-/* ✅ Trên điện thoại, chỉnh nút về vị trí hợp lý hơn */
+/* ✅ Trên điện thoại */
 @media (max-width: 768px) {
   .button-container {
     flex-direction: column;
@@ -99,12 +99,14 @@ body {
   }
 
   .yes-btn, .no-btn {
-    position: static;
+    position: relative !important;  /* Xóa absolute trên điện thoại */
     width: 120px;
     height: 40px;
     font-size: 14px;
+    text-align: center;
   }
 }
+
 
 
 .result-container {

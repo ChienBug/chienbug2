@@ -30,10 +30,10 @@ body {
 }
 
 .question-container {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transition: 0.2s;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Căn giữa */
 }
 .tenor-gif-embed {
   width: 100%;
@@ -123,8 +123,21 @@ body {
   transition: 0.2s;
 }
 .gif-result {
-  border-radius: 10px;
-  margin-bottom: 2rem;
+   max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Căn giữa */
+}
+@media (max-width: 768px) {
+  .question {
+    font-size: 20px; /* Chữ nhỏ hơn */
+    width: 90%; /* Để không bị tràn */
+    text-align: center;
+  }
+
+  .result-container h2 {
+    font-size: 24px; /* Chữ nhỏ hơn */
+  }
 }
 .result-container h2 {
   font-size: 3.2rem;

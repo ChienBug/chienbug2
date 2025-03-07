@@ -29,11 +29,11 @@ noBtn.addEventListener("touchstart", (event) => {
 // Xử lý khi bấm "Yes"
 yesBtn.addEventListener("click", () => {
     questionContainer.style.display = "none";
-    heartLoader.style.display = "flex";
+    heartLoader.style.display = "flex"; // Hiện trái tim khi bấm Yes
 
     setTimeout(() => {
-        heartLoader.style.display = "none";
-        resultContainer.style.display = "flex";
+        heartLoader.style.display = "none"; // Ẩn trái tim sau 3s
+        resultContainer.style.display = "flex"; // Hiện kết quả
         gifResult?.play();
     }, 3000);
 });

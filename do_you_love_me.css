@@ -76,10 +76,89 @@
     border-radius: 10px;
 }
 
-/* Loader trái tim */
+/* Trái tim loading */
 .cssload-main {
-    display: none;
+    display: none; /* Ẩn ban đầu */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 999;
 }
+
+/* Hiệu ứng trái tim */
+.cssload-heart {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: pulse 1s infinite;
+}
+
+.cssload-heart:before,
+.cssload-heart:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.cssload-heart:before {
+    top: -25px;
+    left: 0;
+}
+
+.cssload-heart:after {
+    left: 25px;
+    top: 0;
+}
+
+/* Bóng dưới trái tim */
+.cssload-shadow {
+    width: 50px;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    border-radius: 50%;
+    animation: shadowPulse 1s infinite;
+}
+
+/* Hiệu ứng đập tim */
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(-45deg);
+    }
+    100% {
+        transform: scale(1) rotate(-45deg);
+    }
+}
+
+/* Hiệu ứng bóng */
+@keyframes shadowPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
 
 /* Responsive cho điện thoại */
 @media (max-width: 600px) {

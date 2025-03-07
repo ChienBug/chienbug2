@@ -15,7 +15,11 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-
+.gif-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -45,18 +49,9 @@ body {
 }
 
 .question {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 1rem;
+   font-size: 24px;
+    margin: 20px 0;
 }
-
-/* ✅ Điều chỉnh font chữ nhỏ hơn trên điện thoại */
-@media (max-width: 768px) {
-  .question {
-    font-size: 2rem;
-  }
-}
-
 
 .btn {
   position: absolute;
@@ -81,33 +76,19 @@ body {
 
 /* Cấu hình nút mặc định */
 .button-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Giãn cách nút */
+ display: flex;
+    gap: 15px;
 }
 
-.yes-btn, .no-btn {
-  width: 150px;
-  height: 50px;
-  font-size: 16px;
-  position: relative; /* Không dùng absolute */
+.yes-btn {
+    background-color: #ff4081;
+    color: white;
 }
-
-/* ✅ Điều chỉnh trên điện thoại */
-@media (max-width: 768px) {
-  .button-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .yes-btn, .no-btn {
-    width: 120px;
-    height: 40px;
-    font-size: 14px;
-  }
+.no-btn {
+    background-color: #333;
+    color: white;
+    position: relative;
 }
-
-
 
 
 .result-container {
@@ -128,16 +109,20 @@ body {
   display: block;
   margin: 0 auto; /* Căn giữa */
 }
-@media (max-width: 768px) {
-  .question {
-    font-size: 20px; /* Chữ nhỏ hơn */
-    width: 90%; /* Để không bị tràn */
-    text-align: center;
-  }
-
-  .result-container h2 {
-    font-size: 24px; /* Chữ nhỏ hơn */
-  }
+@media (max-width: 600px) {
+    .question {
+        font-size: 20px;
+    }
+    
+    .btn {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 .result-container h2 {
   font-size: 3.2rem;

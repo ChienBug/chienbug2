@@ -90,6 +90,11 @@ body {
   -moz-transform: translate(-100%, -50%);
   transition: 0.2s;
 }
+.video-wrapper {
+  display: flex;
+  justify-content: center; /* Căn giữa video */
+  align-items: center;
+}
 .gif-result {
   border-radius: 10px;
   margin-bottom: 2rem;

@@ -12,7 +12,21 @@ body {
   background-color: #ffe6e9;
   font-family: "Quicksand", sans-serif;
 }
+h2 {
+  font-size: 1.2rem; /* Tăng giảm tùy ý */
+  word-wrap: break-word; /* Xuống dòng khi cần */
+}
 
+/* Đảm bảo hiển thị tốt trên điện thoại */
+@media (max-width: 480px) {
+  .result-container {
+    width: 95%; /* Tăng chiều rộng một chút trên mobile */
+  }
+
+  h2 {
+    font-size: 1rem; /* Giảm kích thước chữ */
+  }
+}
 
 .container {
   position: absolute;

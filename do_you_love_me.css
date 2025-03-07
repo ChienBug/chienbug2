@@ -36,15 +36,27 @@ body {
   transition: 0.2s;
 }
 .tenor-gif-embed {
-  height: 15rem;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   pointer-events: none;
   border-radius: 10px;
   margin-bottom: 3rem;
 }
+
 .question {
-  font-size: 3.5rem;
+  font-size: 3rem;
+  text-align: center;
   margin-bottom: 1rem;
 }
+
+/* ✅ Điều chỉnh font chữ nhỏ hơn trên điện thoại */
+@media (max-width: 768px) {
+  .question {
+    font-size: 2rem;
+  }
+}
+
 .button-container {
   display: flex;
   justify-content: center;
@@ -71,12 +83,29 @@ body {
   text-shadow: 1px 1px 5px rgba(255, 182, 193, 0.8);
 }
 
-.yes-btn {
-  right: 54%;
+.yes-btn, .no-btn {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
 }
-.no-btn {
-  left: 54%;
+
+/* ✅ Trên điện thoại, chỉnh nút về vị trí hợp lý hơn */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .yes-btn, .no-btn {
+    position: static;
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+  }
 }
+
 
 .result-container {
   display: none;

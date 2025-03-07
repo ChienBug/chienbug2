@@ -86,7 +86,7 @@ img {
     height: 50px;
     background-color: red;
     transform: rotate(-45deg);
-    animation: pulse 1s infinite;
+    animation: cssload-heart 1.5s cubic-bezier(0.75, 0, 0.5, 1) infinite;
 }
 
 .cssload-heart:before,
@@ -116,11 +116,11 @@ img {
     background: rgba(0, 0, 0, 0.2);
     margin-top: 10px;
     border-radius: 50%;
-    animation: shadowPulse 1s infinite;
+    animation: cssload-shadow 1.5s cubic-bezier(0.75, 0, 0.5, 1) infinite;
 }
 
 /* Hiệu ứng đập tim */
-@keyframes pulse {
+@keyframes cssload-heart {
     0% {
         transform: scale(1) rotate(-45deg);
     }
@@ -133,7 +133,7 @@ img {
 }
 
 /* Hiệu ứng bóng */
-@keyframes shadowPulse {
+@keyframes cssload-shadow {
     0% {
         transform: scale(1);
         opacity: 0.5;
